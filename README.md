@@ -35,7 +35,7 @@ var light = require('gl-light')(data)
 Create a light by providing `data`.
 
 The following properties on `data` are required:
-- `position` a 3 or 4 vector with the position, with the fourth element specifying point or directional light
+- `position` a 3 or 4 vector with the position, with the fourth element specifying point or directional light, default `[0, 0, 0, 1]`
 
 The fourth element of `position` specifies a point (1) or directional (0) light. If a 3 vector is passed, the fourth element will be set to 1.
 

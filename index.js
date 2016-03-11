@@ -2,7 +2,8 @@ var isfunction = function (value) { return typeof value === 'function' }
 
 module.exports = function Light (data) {
   if (!(this instanceof Light)) return new Light(data)
-  if (!data.position) throw Error ("Must provide a position")
+  data = data || {}
+  if (!data.position) data.position = [0, 0, 0, 1]
   if (data.position.length < 3) throw Error ("Position must have 3 or 4 elements")
   if (data.position.length === 3) data.position = data.position.concat([1])
   var self = this

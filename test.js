@@ -3,7 +3,7 @@ var allclose = require('test-allclose')
 var light = require('./index.js')
 
 test('construction', function (t) {
-  var result = light({position: [0, 0, 0, 1]})
+  var result = light()
   t.ok(result.attributes.position, 'light defined')
   allclose(t)(result.attributes.position, [0, 0, 0, 1])
   t.end()
