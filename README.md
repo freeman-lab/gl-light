@@ -30,7 +30,7 @@ var light = require('gl-light')(data)
 
 ## usage
 
-##### `light = require('gl-light')(data)`
+#### `light = require('gl-light')(data)`
 
 Create a light by providing `data`.
 
@@ -39,7 +39,12 @@ The following properties on `data` are required:
 
 The fourth element of `position` specifies a point (1) or directional (0) light. If a 3 vector is passed, the fourth element will be set to 1.
 
-##### `light.position([x, y, z, [w]])`
+#### `light.attributes`
+
+All derived attributes are stored on `light.attributes`, and include:
+- `position` a 4 vector with the position in homogenous coordinates
+
+#### `light.position([x, y, z, [w]])`
 
 Update the position. If a 3 vector is passed, the fourth element will be kept the same.
 
