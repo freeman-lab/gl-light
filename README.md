@@ -42,3 +42,9 @@ The fourth element of `position` specifies a point (1) or directional (0) light.
 ##### `light.position([x, y, z, [w]])`
 
 Update the position. If a 3 vector is passed, the fourth element will be kept the same.
+
+[npm-image]: https://img.shields.io/badge/npm-v1.0.0-lightgray.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/gl-light
+[standard-image]: https://img.shields.io/badge/code%20style-standard-lightgray.svg?style=flat-square
+[standard-url]: https://github.com/feross/standard
+[experimental-image]: https://img.shields.io/badge/stability-experimental-lightgray.svg?style=flat-square
