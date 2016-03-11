@@ -1,3 +1,5 @@
+var isfunction = function (value) { return typeof value === 'function' }
+
 module.exports = function Light (data) {
   if (!(this instanceof Light)) return new Light(data)
   if (!data.position) throw Error ("Must provide a position")
@@ -6,6 +8,7 @@ module.exports = function Light (data) {
   var self = this
 
   self.position = function (value) {
+    if (isfunction(value)) value = value(self.attributes.position)
     self.attributes.position[0] = value[0]
     self.attributes.position[1] = value[1]
     self.attributes.position[2] = value[2]

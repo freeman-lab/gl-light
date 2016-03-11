@@ -28,3 +28,11 @@ test('position update', function (t) {
   allclose(t)(result.attributes.position, [1, 2, 3, 1])
   t.end()
 })
+
+test('position update function', function (t) {
+  var result = light({position: [0, 0, 0, 1]})
+  allclose(t)(result.attributes.position, [0, 0, 0, 1])
+  result.position(function (d) {return [d[0] + 1, d[1] + 1, d[2] + 1, d[3]]})
+  allclose(t)(result.attributes.position, [1, 1, 1, 1])
+  t.end()
+})
